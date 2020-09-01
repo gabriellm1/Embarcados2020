@@ -32,11 +32,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "stepmotor_vel[0]",
+					"name" : "stepmotor_vel[1]",
 					"strict" : false
 				},
 				{
-					"name" : "stepmotor_vel[1]",
+					"name" : "stepmotor_vel[0]",
 					"strict" : false
 				}
 			]

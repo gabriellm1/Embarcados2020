@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon Aug 31 19:29:43 2020
+Analysis & Synthesis Status : Successful - Mon Aug 31 23:58:33 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : Entrega_1
 Top-level Entity Name : toplevel
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 31
+Total registers : 63
 Total pins : 9
 Total virtual pins : 0
 Total block memory bits : 0

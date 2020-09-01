@@ -22,12 +22,13 @@ entity stepmotor is
         phases  : out std_logic_vector(3 downto 0)
   );
 end entity stepmotor;
-
+-- 2073 passos eletricos 360 graus
 architecture rtl of stepmotor is
 
-   TYPE STATE_TYPE IS (s0, s1, s2, s3);
+   TYPE STATE_TYPE IS (s0, s1, s2, s3, s4);
    SIGNAL state  : STATE_TYPE := s0;
-   signal enable : std_logic  := '0';
+   signal enable : std_logic  := '1';
+	signal turn : integer := 0;
    signal topCounter : integer range 0 to 50000000;
   
 begin
@@ -35,45 +36,67 @@ begin
   process(clk)
   begin
     if (rising_edge(clk)) then
-		if en = '1' then
-		
       CASE state IS
       WHEN s0=>
-        if (enable = '1') then
-				if(dir = '1') then
-					state <= s1;
-				else
-					state <=s3;
-				end if;
+        if (enable = '1' and en = '1') then
+			  if (turn < 2073) then
+					if(dir = '1') then
+						state <= s1;
+					else
+						state <=s3;
+					end if;
+					turn <= turn + 1;
+--			  	else
+--					state <= s4;
+			  end if;
         end if;
       WHEN s1=>
-        if (enable = '1') then
-          	if(dir = '1') then
-					state <= s2;
-				else
-					state <=s0;
-				end if;
-        end if;
+        if (enable = '1' and en = '1') then
+			  if (turn < 2073) then
+					if(dir = '1') then
+							state <= s2;
+						else
+							state <=s0;
+						end if;
+						turn <= turn + 1;
+				  end if;
+--				else
+--					state <= s4;
+			  end if;
       WHEN s2=>
-        if (enable = '1') then
-				if(dir = '1') then
-					state <= s3;
-				else
-					state <=s1;
-				end if;
-        end if;
+        if (enable = '1' and en = '1') then
+			  if (turn < 2073) then
+					if(dir = '1') then
+						state <= s3;
+					else
+						state <=s1;
+					end if;
+					turn <= turn + 1;
+--			  	else
+--					state <= s4;
+			  end if;
+		  end if;
       WHEN s3=>
-        if (enable = '1') then
-				if(dir = '1') then
-					state <= s0;
-				else
-					state <=s2;
-				end if;
-        end if;
+        if (enable = '1' and en = '1') then
+			  if (turn < 2073) then
+					if(dir = '1') then
+						state <= s0;
+					else
+						state <=s2;
+					end if;
+					turn <= turn + 1;
+--				else
+--					state <= s4;
+			  end if;
+		  end if;
+		WHEN s4=>
+			if (enable = '1' and en = '0') then
+				turn <= 0;
+				state <= s0;
+			end if;
       when others=>
         state <= s0;
       END CASE;
-		end if;
     end if;
   end process;
 
@@ -101,6 +124,7 @@ begin
   process(clk)
     variable counter : integer range 0 to 50000000 := 0;
   begin
+
     if (rising_edge(clk)) then
       if (counter < topCounter) then
         counter := counter + 1;
