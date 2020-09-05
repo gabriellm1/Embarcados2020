@@ -3,19 +3,19 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'fpga_clk_50'
-Slack : 13.156
+Slack : 13.604
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'fpga_clk_50'
-Slack : 0.370
+Slack : 0.368
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fpga_clk_50'
-Slack : 9.387
+Slack : 9.390
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'fpga_clk_50'
-Slack : 13.310
+Slack : 13.739
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'fpga_clk_50'
@@ -23,23 +23,23 @@ Slack : 0.368
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fpga_clk_50'
-Slack : 9.306
+Slack : 9.305
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'fpga_clk_50'
-Slack : 15.768
+Slack : 16.042
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'fpga_clk_50'
-Slack : 0.183
+Slack : 0.181
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fpga_clk_50'
-Slack : 9.415
+Slack : 9.416
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'fpga_clk_50'
-Slack : 16.194
+Slack : 16.431
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'fpga_clk_50'
@@ -47,7 +47,7 @@ Slack : 0.172
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fpga_clk_50'
-Slack : 9.419
+Slack : 9.418
 TNS   : 0.000
 
 ------------------------------------------------------------

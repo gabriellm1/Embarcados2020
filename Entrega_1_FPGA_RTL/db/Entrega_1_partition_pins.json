@@ -20,11 +20,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "stepmotor_dir",
+					"name" : "stepmotor_en",
 					"strict" : false
 				},
 				{
-					"name" : "stepmotor_en",
+					"name" : "stepmotor_dir",
 					"strict" : false
 				},
 				{
@@ -32,11 +32,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "stepmotor_vel[1]",
+					"name" : "stepmotor_vel[0]",
 					"strict" : false
 				},
 				{
-					"name" : "stepmotor_vel[0]",
+					"name" : "stepmotor_vel[1]",
 					"strict" : false
 				}
 			]

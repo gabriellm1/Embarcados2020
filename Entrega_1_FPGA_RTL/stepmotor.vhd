@@ -46,9 +46,9 @@ begin
 						state <=s3;
 					end if;
 					turn <= turn + 1;
---			  	else
---					state <= s4;
-			  end if;
+				end if;
+			elsif (enable = '1' and en = '0') then
+				turn <= 0;
         end if;
       WHEN s1=>
         if (enable = '1' and en = '1') then
@@ -57,12 +57,12 @@ begin
 							state <= s2;
 						else
 							state <=s0;
-						end if;
-						turn <= turn + 1;
-				  end if;
---				else
---					state <= s4;
-			  end if;
+					end if;
+					turn <= turn + 1;
+				end if;
+			elsif (enable = '1' and en = '0') then
+				turn <= 0;
+			end if;
       WHEN s2=>
         if (enable = '1' and en = '1') then
 			  if (turn < 2073) then
@@ -72,9 +72,9 @@ begin
 						state <=s1;
 					end if;
 					turn <= turn + 1;
---			  	else
---					state <= s4;
 			  end if;
+			elsif (enable = '1' and en = '0') then
+				turn <= 0;
 		  end if;
       WHEN s3=>
         if (enable = '1' and en = '1') then
@@ -85,15 +85,10 @@ begin
 						state <=s2;
 					end if;
 					turn <= turn + 1;
---				else
---					state <= s4;
-			  end if;
-		  end if;
-		WHEN s4=>
-			if (enable = '1' and en = '0') then
+				end if;
+			elsif (enable = '1' and en = '0') then
 				turn <= 0;
-				state <= s0;
-			end if;
+		  end if;
       when others=>
         state <= s0;
       END CASE;
@@ -119,8 +114,8 @@ begin
   topCounter <= 100000000 when vel = "00" else
 					 10000000 when vel = "01" else
 					 1000000 when vel = "10" else
-                  100000;
-
+                150000;
+--
   process(clk)
     variable counter : integer range 0 to 50000000 := 0;
   begin
