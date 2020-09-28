@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "phases_motor[0]",
+					"strict" : false
+				},
+				{
+					"name" : "phases_motor[1]",
+					"strict" : false
+				},
+				{
+					"name" : "phases_motor[2]",
+					"strict" : false
+				},
+				{
+					"name" : "phases_motor[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_clk_50",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
