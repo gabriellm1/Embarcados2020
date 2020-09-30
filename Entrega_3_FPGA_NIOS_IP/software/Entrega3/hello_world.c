@@ -5,14 +5,6 @@
 
 #include "actions.h"
 
-//#define SIM
-
-// LED Peripheral
-//#define REG_DATA_VEL_OFFSET 1
-//#define REG_DATA_MOTOR_OFFSET 0
-//#define REG_DATA_MOTOR_MASK_ENABLE 1<<0
-//#define REG_DATA_MOTOR_MASK_DIR 1<<1
-//#define REG_DATA_MOTOR_MASK_VEL_MAX 0x03
 
 int main(void){
 

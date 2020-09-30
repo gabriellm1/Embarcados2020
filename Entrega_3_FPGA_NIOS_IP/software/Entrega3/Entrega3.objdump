@@ -39,7 +39,7 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  10 .debug_abbrev 00008fd1  00000000  00000000  00036eac  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_line   0000b5b3  00000000  00000000  0003fe7d  2**0
+ 11 .debug_line   0000b5b1  00000000  00000000  0003fe7d  2**0
                   CONTENTS, READONLY, DEBUGGING
  12 .debug_frame  0000215c  00000000  00000000  0004b430  2**2
                   CONTENTS, READONLY, DEBUGGING
@@ -920,8 +920,8 @@ alt_after_alt_main:
    20268:	003fff06 	br	20268 <alt_after_alt_main>
 
 0002026c <enable_reset_motor>:
-#define REG_DATA_MOTOR_MASK_ENABLE 1<<0
-#define REG_DATA_MOTOR_MASK_DIR 1<<1
+#define REG_DATA_VEL_OFFSET 1
+#define REG_DATA_MOTOR_OFFSET 0
 #define REG_DATA_MOTOR_MASK_VEL_MAX 0x03
 
 
@@ -1102,10 +1102,10 @@ void change_vel(int vel,unsigned int *p_motor){
    20418:	f800283a 	ret
 
 0002041c <main>:
-//#define REG_DATA_MOTOR_OFFSET 0
-//#define REG_DATA_MOTOR_MASK_ENABLE 1<<0
-//#define REG_DATA_MOTOR_MASK_DIR 1<<1
-//#define REG_DATA_MOTOR_MASK_VEL_MAX 0x03
+#include <io.h> /* Leiutura e escrita no Avalon */
+
+#include "actions.h"
+
 
 int main(void){
    2041c:	defffd04 	addi	sp,sp,-12
