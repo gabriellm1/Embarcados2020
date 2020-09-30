@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'niosLab2'
  * SOPC Builder design path: ../../niosLab2.sopcinfo
  *
- * Generated: Thu Sep 24 19:03:22 BRT 2020
+ * Generated: Mon Sep 28 18:00:02 BRT 2020
  */
 
 /*
@@ -137,7 +137,6 @@
 #define __ALTERA_AVALON_ONCHIP_MEMORY2
 #define __ALTERA_NIOS2_GEN2
 #define __MOTO
-#define __PERIPHERAL_LED
 
 
 /*
@@ -156,19 +155,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x41080
+#define ALT_STDERR_BASE 0x41040
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x41080
+#define ALT_STDIN_BASE 0x41040
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x41080
+#define ALT_STDOUT_BASE 0x41040
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -193,7 +192,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x41080
+#define JTAG_UART_0_BASE 0x41040
 #define JTAG_UART_0_IRQ 0
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -211,7 +210,7 @@
  */
 
 #define ALT_MODULE_CLASS_moto_0 moto
-#define MOTO_0_BASE 0x41040
+#define MOTO_0_BASE 0x41000
 #define MOTO_0_IRQ -1
 #define MOTO_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define MOTO_0_NAME "/dev/moto_0"
@@ -246,19 +245,5 @@
 #define ONCHIP_MEMORY2_0_SPAN 120000
 #define ONCHIP_MEMORY2_0_TYPE "altera_avalon_onchip_memory2"
 #define ONCHIP_MEMORY2_0_WRITABLE 1
-
-
-/*
- * peripheral_LED_0 configuration
- *
- */
-
-#define ALT_MODULE_CLASS_peripheral_LED_0 peripheral_LED
-#define PERIPHERAL_LED_0_BASE 0x41000
-#define PERIPHERAL_LED_0_IRQ -1
-#define PERIPHERAL_LED_0_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define PERIPHERAL_LED_0_NAME "/dev/peripheral_LED_0"
-#define PERIPHERAL_LED_0_SPAN 64
-#define PERIPHERAL_LED_0_TYPE "peripheral_LED"
 
 #endif /* __SYSTEM_H_ */
