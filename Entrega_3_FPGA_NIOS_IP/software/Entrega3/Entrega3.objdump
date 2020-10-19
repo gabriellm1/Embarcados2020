@@ -1166,9 +1166,9 @@ int main(void){
    204a0:	01000044 	movi	r4,1
    204a4:	00203600 	call	20360 <change_vel>
 
-	  usleep(30000000);
-   204a8:	010072b4 	movhi	r4,458
-   204ac:	2130e004 	addi	r4,r4,-15488
+	  usleep(10000000);
+   204a8:	01002674 	movhi	r4,153
+   204ac:	2125a004 	addi	r4,r4,-27008
    204b0:	002dc780 	call	2dc78 <usleep>
 	  printf("-------------sleep------------ \n");
    204b4:	010000f4 	movhi	r4,3

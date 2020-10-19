@@ -30,7 +30,7 @@ int main(void){
 	  dir_change_motor(p_motor);
 	  change_vel(1,p_motor);
 
-	  usleep(30000000);
+	  usleep(10000000);
 	  printf("-------------sleep------------ \n");
 
 	  disable_motor(p_motor);
