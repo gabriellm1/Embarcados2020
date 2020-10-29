@@ -1,5 +1,5 @@
 #
-TARGET = bin_exec
+TARGET = read_switch
 
 ALT_DEVICE_FAMILY ?= soc_cv_av
 SOCEDS_ROOT ?= $(SOCEDS_DEST_ROOT)
@@ -20,15 +20,15 @@ $(TARGET): main.o
 
 deploy:
 
-	scp $(TARGET) root@192.168.0.50:/home/root
+	scp $(TARGET) root@192.168.0.37:/home/root/scripts
 
 rm_ssh:
 
-	ssh root@192.168.0.50 rm -f $(TARGET)
+	ssh root@192.168.0.37 rm -f $(TARGET)
 
 run:
 
-	ssh root@192.168.0.50 ./$(TARGET)
+	ssh root@192.168.0.37 ./scripts/$(TARGET)
 
 .PHONY: clean
 clean:
